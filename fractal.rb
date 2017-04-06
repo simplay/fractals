@@ -44,16 +44,16 @@ def colorAt(x, y)
   end
 end
 
-width = ARGV[0] || 800
-height = ARGV[1] || 800
-zoom = ARGV[2] || 1
+width = ARGV[0].to_i || 800
+height = ARGV[1].to_i || 800
+zoom = ARGV[2].to_i || 1
 zoom = Math.sqrt(zoom)
 
 png = ChunkyPNG::Image.new(width, height, ChunkyPNG::Color::TRANSPARENT)
 
 # interesting location at 300 1200
-cx = 0 || ARGV[3]
-cy = 0 || ARGV[4]
+cx = 0 || ARGV[3].to_i
+cy = 0 || ARGV[4].to_i
 center = [cx, cy]
 density = 1
 
